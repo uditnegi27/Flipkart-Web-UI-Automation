@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: Flipkart_UI_TestCases.TestFlipkart_UI_Login
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 18.152 s <<< FAILURE! - in Flipkart_UI_TestCases.TestFlipkart_UI_Login
+open_appliancesPage(Flipkart_UI_TestCases.TestFlipkart_UI_Login)  Time elapsed: 0.093 s  <<< FAILURE!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: element is not attached to the page document
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'ip-192-168-0-103.ap-south-1.compute.internal', ip: 'fe80:0:0:0:10a1:ac42:9d08:6908%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.5.1', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c8794a19542551f04da33f20f7db400e, clickElement {id=8ff909d6-967f-40eb-acc6-76c712d26e7c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /var/folders/vc/xx8_9t4d2c9...}, goog:chromeOptions: {debuggerAddress: localhost:50161}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50161/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (c8794a19542551f04da33f20f7db400e)] -> xpath: //div[contains(@class, '_1mkliO')]//following-sibling::div[contains(text(), 'Appliances')]]
+Session ID: c8794a19542551f04da33f20f7db400e
+	at Flipkart_UI_TestCases.TestFlipkart_UI_Login.open_appliancesPage(TestFlipkart_UI_Login.java:65)
+
+open_travelPage(Flipkart_UI_TestCases.TestFlipkart_UI_Login)  Time elapsed: 5.046 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class, '_1mkliO')]//following-sibling::div[contains(text(), 'Travel')]"}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'ip-192-168-0-103.ap-south-1.compute.internal', ip: 'fe80:0:0:0:10a1:ac42:9d08:6908%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.5.1', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c8794a19542551f04da33f20f7db400e, findElement {using=xpath, value=//div[contains(@class, '_1mkliO')]//following-sibling::div[contains(text(), 'Travel')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /var/folders/vc/xx8_9t4d2c9...}, goog:chromeOptions: {debuggerAddress: localhost:50161}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50161/devtoo..., se:cdpVersion: 103.0.5060.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c8794a19542551f04da33f20f7db400e
+	at Flipkart_UI_TestCases.TestFlipkart_UI_Login.open_travelPage(TestFlipkart_UI_Login.java:70)
+
