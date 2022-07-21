@@ -1,0 +1,42 @@
+package Flipkart_UI_TestCases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import Flipkart_UI_Base.Base;
+import Flipkart_UI_Pages.Flipkart_UI_HomePage;
+import Flipkart_UI_Pages.Flipkart_UI_LogIn_PopUpPages;
+
+public class TestFlipkart_UI_Login extends Base{
+	
+	Flipkart_UI_LogIn_PopUpPages logIn;
+	Flipkart_UI_HomePage homePage;
+	
+	public TestFlipkart_UI_Login() {
+		super();
+	}
+	
+	@org.testng.annotations.BeforeClass
+	public void setUp() throws InterruptedException {
+		initialization();
+		Thread.sleep(5000);
+		logIn = new Flipkart_UI_LogIn_PopUpPages();
+	}
+	
+	@Test(priority = 1)
+	public void get_logInPage_title() {
+		String title = logIn.get_logIn_page_title();
+		Assert.assertEquals(title, "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!");
+	}
+	
+	@Test(priority = 2)
+	public void logIn() {
+		homePage = logIn.flipkart_login(prop.getProperty("username"), prop.getProperty("password"));
+		
+	}
+	
+	@org.testng.annotations.AfterClass
+	public void tearDown() {
+		driver.close();
+	}
+}

@@ -9,4 +9,8 @@ public class Flipkart_UI_AppliancesPage extends Base{
 	public Flipkart_UI_AppliancesPage() {
 		PageFactory.initElements(driver, this);
 	}
+	
+	public void sum() {
+		System.out.println("aa");
+	}
 }

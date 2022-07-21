@@ -1,0 +1,15 @@
+package Flipkart_UI_Pages;
+
+import Flipkart_UI_Base.Base;
+
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.support.FindBy;
+
+public class Flipkart_UI_HomePage extends Base{
+	
+	public Flipkart_UI_HomePage() {
+		super();
+	}
+	
+	
+}

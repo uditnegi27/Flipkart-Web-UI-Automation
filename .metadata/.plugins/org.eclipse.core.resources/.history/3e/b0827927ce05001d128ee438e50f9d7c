@@ -1,0 +1,16 @@
+package mamaEarth_GET;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class firstGet {
+	
+	public void test_1() {
+		Response response = RestAssured.get("https://mmrth-nd-api.honasa-production.net/v1/content/contentfulBanners");
+		
+		System.out.println(response.getStatusCode());
+		System.out.println(response.time());
+
+
+	}
+}

@@ -1,0 +1,43 @@
+package Flipkart_UI_TestCases;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.testng.Assert;
+
+import Flipkart_UI_Base.Base;
+import Flipkart_UI_Pages.Flipkart_UI_LogIn_PopUpPages;
+
+public class Flipkart_UI_LoginTest extends Base{
+	
+	Flipkart_UI_LogIn_PopUpPages logIn;
+	
+	public Flipkart_UI_LoginTest() {
+		super();
+	}
+	
+	@BeforeClass
+	public void setUp() {
+		initialization();
+		logIn = new Flipkart_UI_LogIn_PopUpPages();
+	}
+	
+	@Test
+	public void get_logInPage_title() {
+		String title = logIn.get_logIn_page_title();
+		Assert.assertEquals(title, "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!");
+	}
+	
+	@Test
+	public void logIn() {
+		homePage = logIn.flipkart_login(prop.getProperty("username"), prop.getProperty("Udit@@12"));
+		
+	}
+	
+	
+	
+	@AfterClass
+	public void tearDown() {
+		driver.close();
+	}
+}

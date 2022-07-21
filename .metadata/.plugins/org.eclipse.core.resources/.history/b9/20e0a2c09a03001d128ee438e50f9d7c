@@ -1,0 +1,37 @@
+package Flipkart_UI_TestCases;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.testng.Assert;
+
+import Flipkart_UI_Base.Base;
+import Flipkart_UI_Pages.Flipkart_UI_LogIn_PopUpPages;
+
+public class Flipkart_UI_LoginTest extends Base{
+	
+	Flipkart_UI_LogIn_PopUpPages logIn;
+	
+	public Flipkart_UI_LoginTest() {
+		super();
+	}
+	
+	@BeforeClass
+	public void setUp() {
+		initialization();
+		logIn = new Flipkart_UI_LogIn_PopUpPages();
+	}
+	
+	@Test
+	public void get_logInPageTitle() {
+		String title = logIn.get_logIn_page_title();
+		Assert.assertEquals(title, "flipkart");
+	}
+	
+	
+	
+	@AfterClass
+	public void tearDown() {
+		driver.close();
+	}
+}

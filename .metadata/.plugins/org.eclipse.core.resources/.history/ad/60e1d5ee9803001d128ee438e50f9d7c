@@ -1,0 +1,12 @@
+package Flipkart_UI_Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class Flipkart_UI_HomePage {
+	
+	
+	
+	
+	
+}
